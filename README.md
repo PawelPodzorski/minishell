@@ -4,6 +4,27 @@ A small Unix shell written in C++.
 
 The goal of this project is to learn how shells work internally, including command parsing, built-in commands, process creation, external command execution, pipes, redirections, and environment handling.
 
+## Build and Run
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd minishell
+```
+Build the project and clean build files:
+
+```bash
+make
+make clean
+```
+Run:
+
+```
+./minishell
+```
+
+
 ## Current Features
 
 ### Shell loop
