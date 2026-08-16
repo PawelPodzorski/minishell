@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-int minishell::buildin_exit() {
+int minishell::builtin_exit(const Args& args) {
     std::cout << "Exiting minishell...\n";
     exit(SUCCESS);
 }

@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-int minishell::builtin_pwd() {
+int minishell::builtin_pwd(const Args& args) {
     char cwd[1024];
     
     // Get the current working directory

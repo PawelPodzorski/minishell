@@ -1,6 +1,25 @@
 #include <minishell.h>
 
-void HadnleBuildinCommands(const std::vector<std::string>& args);
+using BuiltinFunction = std::function<void(const Args&)>;
+
+std::unordered_map<std::string, BuiltinFunction> builtins = {
+    {"exit", minishell::builtin_exit},
+    {"pwd", minishell::builtin_pwd},
+    {"cd", minishell::builtin_cd}
+};
+
+void HandleBuiltinCommands(const Args& args, const std::unordered_map<std::string, BuiltinFunction>& builtins) {
+    if (args.empty()) {
+        return;
+    }
+
+    auto it = builtins.find(args[0]);
+    if (it != builtins.end()) {
+        it->second(args);
+    } else {
+        std::cout << args[0] << ": command not found" << '\n';
+    }
+}
 
 int main() {
     std::string input;
@@ -21,30 +40,22 @@ int main() {
         
         args = minishell::parse_input(input);
 
-        HadnleBuildinCommands(args);
+        HandleBuiltinCommands(args, builtins);
     }
     return 0;
 }
 
-void HadnleBuildinCommands(const std::vector<std::string>& args) {
+void HandleBuiltinCommands(const Args& args, const std::unordered_map<std::string, BuiltinFunction>& builtins) {
     if (args.empty()) {
         return;
     }
 
-    if (args[0] == "exit") {
-        minishell::buildin_exit();
-    }
-    else if (args[0] == "pwd") {
-        minishell::builtin_pwd();
-    }
-    else if (args[0] == "cd") {
-        if (args.size() < 2) {
-            std::cerr << "cd: missing argument\n";
-            return;
-        }
-        minishell::builtin_cd(args[1]);
-    }
-    else {
+    auto it = builtins.find(args[0]);
+
+    if (it != builtins.end()) {
+        it->second(args);
+        return;
+    } else {
         std::cout << args[0] << ": command not found" << '\n';
     }
 }
