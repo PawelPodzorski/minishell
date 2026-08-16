@@ -4,7 +4,7 @@ CXX = g++
 
 CXXFLAGS = -Iinclude
 
-SRC = src/main.cpp
+SRC = $(shell find src -name "*.cpp")
 
 OBJ = $(SRC:.cpp=.o)
 
