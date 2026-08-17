@@ -44,12 +44,12 @@
 * [x] Absolute paths
 * [x] Relative paths
 * [x] Proper error handling
-* [ ] `cd` without arguments → `$HOME`
-* [ ] `cd ~`
+* [x] `cd` without arguments → `$HOME`
+* [x] `cd ~`
 * [ ] `cd -`
 * [ ] Update `PWD`
 * [ ] Update `OLDPWD`
-* [ ] Too many arguments
+* [x] Too many arguments
 
 ### `echo`
 
