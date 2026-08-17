@@ -8,18 +8,7 @@ std::unordered_map<std::string, BuiltinFunction> builtins = {
     {"cd", minishell::builtin_cd}
 };
 
-void HandleBuiltinCommands(const Args& args, const std::unordered_map<std::string, BuiltinFunction>& builtins) {
-    if (args.empty()) {
-        return;
-    }
-
-    auto it = builtins.find(args[0]);
-    if (it != builtins.end()) {
-        it->second(args);
-    } else {
-        std::cout << args[0] << ": command not found" << '\n';
-    }
-}
+void HandleBuiltinCommands(const Args& args, const std::unordered_map<std::string, BuiltinFunction>& builtins);
 
 int main() {
     std::string input;
