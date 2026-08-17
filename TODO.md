@@ -28,8 +28,9 @@
 ### `exit`
 
 * [x] Basic `exit`
-* [ ] Handle exit status
-* [ ] Handle arguments
+* [x] Handle exit status
+* [x] Handle invalid arguments
+* [x] Handle multiple arguments
 
 ### `pwd`
 
