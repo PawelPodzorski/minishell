@@ -16,7 +16,6 @@ Build the project and clean build files:
 
 ```bash
 make
-make clean
 ```
 Run:
 
@@ -51,14 +50,34 @@ becomes:
 args[0] = "cd"
 args[1] = "/home/user"
 ```
+### Environment
+
+* Reads environment variables through `environ`
+* Displays environment variables with `env`
+* Uses `getenv()` to access environment variables
+* Updates `PWD` and `OLDPWD` when using `cd`
 
 ### Built-in commands
 
 Currently implemented:
 
 * `exit`
+  * Exit status
+  * Invalid numeric arguments
+  * Multiple arguments handling
 * `pwd`
+  * Print current working directory
+  * Error handling
 * `cd`
+  * Absolute paths
+  * Relative paths
+  * `cd` → `$HOME`
+  * `cd ~`
+  * `cd -`
+  * Updates `PWD`
+  * Updates `OLDPWD`
+* `env`
+  * Display environment variables
 
 Built-ins are stored in an `std::unordered_map` and dispatched based on the command name.
 

@@ -15,6 +15,17 @@ int minishell::builtin_cd(const Args& args) {
 
         path = home;
     }
+    else if (args[1] == "-") {
+        const char* old_pwd = std::getenv("OLDPWD");
+
+        if (old_pwd == nullptr) {
+            error_print(args[0], "OLDPWD not set");
+            return ERROR;
+        }
+
+        path = old_pwd;
+        std::cout << path << '\n';
+    }
     else {
         path = args[1];
     }

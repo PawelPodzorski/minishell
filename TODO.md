@@ -46,7 +46,7 @@
 * [x] Proper error handling
 * [x] `cd` without arguments → `$HOME`
 * [x] `cd ~`
-* [ ] `cd -`
+* [x] `cd -`
 * [x] Update `PWD`
 * [x] Update `OLDPWD`
 * [x] Too many arguments
