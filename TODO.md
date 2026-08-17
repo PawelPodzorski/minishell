@@ -47,8 +47,8 @@
 * [x] `cd` without arguments → `$HOME`
 * [x] `cd ~`
 * [ ] `cd -`
-* [ ] Update `PWD`
-* [ ] Update `OLDPWD`
+* [x] Update `PWD`
+* [x] Update `OLDPWD`
 * [x] Too many arguments
 
 ### `echo`
