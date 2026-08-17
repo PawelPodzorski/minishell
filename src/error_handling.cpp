@@ -5,7 +5,7 @@ namespace minishell {
         std::cerr << "minishell: " << command << ": " << message << std::endl;
     }
 
-    bool check_too_many_args(const std::vector<std::string>& args, size_t max_args) {
+    bool check_too_many_args(const Args& args, size_t max_args) {
         if (args.size() -1 > max_args) {
             error_print(args[0], "too many arguments");
             return true;
@@ -13,7 +13,7 @@ namespace minishell {
         return false;
     }
 
-    bool check_too_few_args(const std::vector<std::string>& args, size_t min_args) {
+    bool check_too_few_args(const Args& args, size_t min_args) {
         if (args.size() -1 < min_args) {
             error_print(args[0], "too few arguments");
             return true;

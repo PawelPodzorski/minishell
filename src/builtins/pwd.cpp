@@ -5,7 +5,7 @@ int minishell::builtin_pwd(const Args& args) {
     
     // Get the current working directory
     if (getcwd(cwd, sizeof(cwd)) == nullptr) {
-        std::perror("pwd");
+        minishell::error_print(args[0], "cannot get current directory");
         return ERROR;
     }
 
