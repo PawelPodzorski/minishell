@@ -1,6 +1,8 @@
 #ifndef MINISHELL_H
 #define MINISHELL_H
 
+#include "error_handling.h"
+
 #include <iostream>
 #include <string>
 #include <unistd.h>
