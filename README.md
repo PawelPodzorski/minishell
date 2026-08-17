@@ -12,7 +12,7 @@ Clone the repository:
 git clone <repository-url>
 cd minishell
 ```
-Build the project and clean build files:
+Build the project:
 
 ```bash
 make
