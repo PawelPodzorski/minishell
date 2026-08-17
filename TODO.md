@@ -71,7 +71,7 @@
 
 ### `env`
 
-* [ ] Display environment
+* [x] Display environment
 * [ ] Handle arguments/options
 
 ### `ls`
