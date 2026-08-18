@@ -76,7 +76,7 @@
 
 ### `ls`
 
-* [ ] Basic directory listing
+* [x] Basic directory listing
 * [ ] `-a`
 * [ ] `-l`
 * [ ] `-la` / `-al`
