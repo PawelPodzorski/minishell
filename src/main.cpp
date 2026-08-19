@@ -6,8 +6,7 @@ std::unordered_map<std::string, BuiltinFunction> builtins = {
     {"exit", minishell::builtin_exit},
     {"pwd", minishell::builtin_pwd},
     {"cd", minishell::builtin_cd},
-    {"env", minishell::builtin_env},
-    {"ls", minishell::builtin_ls}
+    {"env", minishell::builtin_env}
 };
 
 void HandleBuiltinCommands(const Args& args, const std::unordered_map<std::string, BuiltinFunction>& builtins);

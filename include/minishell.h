@@ -25,7 +25,6 @@ namespace minishell {
     int builtin_pwd(const Args& args);
     int builtin_cd(const Args& args);
     int builtin_env(const Args& args);
-    int builtin_ls(const Args& args);
 
     std::vector<std::string> parse_input(const std::string& input);
 }

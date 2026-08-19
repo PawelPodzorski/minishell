@@ -74,14 +74,6 @@
 * [x] Display environment
 * [ ] Handle arguments/options
 
-### `ls`
-
-* [x] Basic directory listing
-* [ ] `-a`
-* [ ] `-l`
-* [ ] `-la` / `-al`
-* [ ] Directory argument
-* [ ] Error handling
 
 ## External Commands
 
